@@ -12,6 +12,11 @@ if !exists("main_syntax")
   let main_syntax = 'javascript'
 endif
 
+" Set custom folding, added by Tomek
+setlocal foldmethod=indent
+set foldlevelstart=2
+set foldnestmax=2
+
 " Dollar sign is permitted anywhere in an identifier
 if v:version > 704 || v:version == 704 && has('patch1142')
   syntax iskeyword @,48-57,_,192-255,$
